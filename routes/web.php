@@ -28,9 +28,11 @@ Route::get('a', function(){
 });
 
 
-Route::get('juguete', [JugueteController::class, 'index']);
+Route::get('/juguete', [JugueteController::class, 'index'])->name('juguete.index');
 
-Route::get('/juguete/create', [JugueteController::class,'index']);
+Route::get('/juguete/create', [JugueteController::class,'create'])->name('juguete.create');
+
+Route::get('/juguete/{id}', [JugueteController::class,'show'])->name('juguete.show');
 
 
 

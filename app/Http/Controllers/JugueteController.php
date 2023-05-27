@@ -16,9 +16,9 @@ class JugueteController extends Controller
         return view('juguetes.create');
     }
 
+    public function show($id){
+        $juguete = Juguete::find($id);
 
-
-    public function show($juguete){
-        return view('juguetes.show',compact($juguete));
+        return view('juguetes.show',compact('juguete'));
     }
 }
