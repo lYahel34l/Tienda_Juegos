@@ -1,6 +1,14 @@
 <?php
 
+
+use App\Http\Controllers\JugueteController;
+use App\Http\Controllers\HomeController;
+
+use App\Models\Juguete;
+use Illuminate\Routing\Route as RoutingRoute;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Routing\RouteCompiler;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +21,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', HomeController::class);
+
+Route::get('a', function(){
+    return "hola2";
 });
+
+
+Route::get('juguete', [JugueteController::class, 'index']);
+
+Route::get('/juguete/create', [JugueteController::class,'index']);
+
+
+
