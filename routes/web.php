@@ -32,7 +32,12 @@ Route::get('/juguete', [JugueteController::class, 'index'])->name('juguete.index
 
 Route::get('/juguete/create', [JugueteController::class,'create'])->name('juguete.create');
 
-Route::get('/juguete/{id}', [JugueteController::class,'show'])->name('juguete.show');
+Route::post('juguete', [JugueteController::class,'store'])->name('juguete.store');
 
+Route::get('/juguete/{juguete}', [JugueteController::class,'show'])->name('juguete.show');
+
+Route::get('/juguetes/{juguete}/edit', [JugueteController::class,'edit'])->name('juguete.edit');
+
+Route::put('juguete/{juguete}',[JugueteController::class,'update'])->name('juguete.update');
 
 

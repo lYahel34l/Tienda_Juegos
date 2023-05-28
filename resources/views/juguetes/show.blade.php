@@ -15,4 +15,8 @@
     </div>
 </div>
 
+<a href="{{route('juguete.edit', $juguete)}}"> 
+    <button type="button" class="btn btn-primary">Editar Juguete</button>
+   </a>
+
 @endsection()

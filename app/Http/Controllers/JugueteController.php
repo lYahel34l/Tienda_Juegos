@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class JugueteController extends Controller
 {
     public function index(){
-        $juguetes=Juguete::all();
+        $juguetes=Juguete::orderBy('id', 'desc')->paginate();
         return view('juguetes.index',compact('juguetes'));
     }
 
@@ -16,9 +16,34 @@ class JugueteController extends Controller
         return view('juguetes.create');
     }
 
-    public function show($id){
-        $juguete = Juguete::find($id);
+    public function store(Request $request){
+        $juguete = new Juguete();
+        $juguete->nombre = $request->name;
+        $juguete->marca = $request->marca;
+        $juguete->precio = $request->precio;
+        $juguete->rutaImagen = $request->rutaImagen;
 
+        $juguete->save();
+
+        return redirect()->route('juguete.show', $juguete);
+    }
+
+    public function show(Juguete $juguete){
         return view('juguetes.show',compact('juguete'));
+    }
+
+    public function edit(Juguete $juguete){
+        return view('juguetes.edit', compact('juguete'));
+    }
+
+    public function update(Request $request, Juguete $juguete){
+        $juguete->nombre = $request->name;
+        $juguete->marca = $request->marca;
+        $juguete->precio = $request->precio;
+        $juguete->rutaImagen = $request->rutaImagen;
+
+        $juguete->save();
+
+        return redirect()->route('juguete.show', $juguete);
     }
 }
