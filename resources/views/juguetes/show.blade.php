@@ -11,12 +11,24 @@
         </div>
         <div class="col-6">
             <p><strong>Precio:</strong> <br>  MXN:{{$juguete->precio}}  </p>
+            <br>
+            <br>
+            <br>
+            <a href="{{route('juguete.edit', $juguete)}}"> 
+                <button type="button" class="btn btn-primary">Editar Juguete</button>
+               </a>
+                <br>
+                <br>
+               <form action="{{route('juguete.destroy', $juguete)}}" method="POST">
+                @csrf
+                @method('delete')
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form
         </div>
     </div>
 </div>
 
-<a href="{{route('juguete.edit', $juguete)}}"> 
-    <button type="button" class="btn btn-primary">Editar Juguete</button>
-   </a>
+>
+   
 
 @endsection()

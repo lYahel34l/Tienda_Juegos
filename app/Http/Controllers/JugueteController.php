@@ -17,6 +17,13 @@ class JugueteController extends Controller
     }
 
     public function store(Request $request){
+        $request->validate([
+            'name'=>'required',
+            'marca'=>'required',
+            'precio'=>'required',
+            'rutaImagen'=>'required'
+        ]);
+
         $juguete = new Juguete();
         $juguete->nombre = $request->name;
         $juguete->marca = $request->marca;
@@ -37,6 +44,14 @@ class JugueteController extends Controller
     }
 
     public function update(Request $request, Juguete $juguete){
+
+        $request->validate([
+            'name'=>'required',
+            'marca'=>'required',
+            'precio'=>'required',
+            'rutaImagen'=>'required'
+        ]);
+
         $juguete->nombre = $request->name;
         $juguete->marca = $request->marca;
         $juguete->precio = $request->precio;
@@ -45,5 +60,10 @@ class JugueteController extends Controller
         $juguete->save();
 
         return redirect()->route('juguete.show', $juguete);
+    }
+
+    public function destroy(Juguete $juguete){
+        $juguete->delete();
+        return redirect()->route('juguete.index');
     }
 }

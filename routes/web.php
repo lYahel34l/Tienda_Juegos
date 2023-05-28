@@ -40,4 +40,6 @@ Route::get('/juguetes/{juguete}/edit', [JugueteController::class,'edit'])->name(
 
 Route::put('juguete/{juguete}',[JugueteController::class,'update'])->name('juguete.update');
 
+Route::delete('juguete/{juguete}',[JugueteController::class,'destroy'])->name('juguete.destroy');
+
 
