@@ -1,24 +1,38 @@
 @extends('layouts.plantilla')
 
 @section('contenido')
- <a href=""> agregarjuguetes </a>
+  <h1>Integrantes</h1>
+    
 
-    @foreach ($juguetes as $juguete)
-   
-    <div class="card" style="width: 18rem;">
-        <a href="">
-        <img src="{{$juguete->rutaImagen}}" class="card-img-top" alt="...">
-        </a>
+  <div class="container">
+    <div class="row">
+
+      <div class="card" style="width: 18rem;">
+        <img src="imagenes/kiwi.jpeg" class="card-img-top" alt="...">
         <div class="card-body">
-            <a href="">
-          <p class="card-text">{{$juguete->nombre}}</p>
-            </a>
+          <p class="card-text">César Alejandro Cervantes Salinas </p>
         </div>
       </div>
 
-    
+      <div class="card" style="width: 18rem;">
+        <img src="imagenes/diego.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Diego Sebastián Medina Zárate </p>
+        </div>
+      </div>
 
-    @endforeach
+
+      <div class="card" style="width: 18rem;">
+        <img src="imagenes/yahel.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Orlando Yahel Luevano Garcia</p>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+   
 
 @endsection()
 

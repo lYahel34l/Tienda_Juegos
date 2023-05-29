@@ -23,12 +23,12 @@
                 @csrf
                 @method('delete')
                     <button type="submit" class="btn btn-danger">Eliminar</button>
-                </form
+               </form>
         </div>
     </div>
 </div>
 
->
+
    
 
 @endsection()

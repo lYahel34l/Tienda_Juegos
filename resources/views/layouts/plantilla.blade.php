@@ -15,20 +15,29 @@
 <!--  NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{route('juguete.index')}}">Jugue</a>
+    <a class="navbar-brand" href="{{route('juguete.index')}}">ToYsK</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('juguete.index')}}">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('juguete.index')}}">Juguetes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="{{route('cliente.index')}}">Clientes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href="{{route('proveedor.index')}}">Proveedores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Almacen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ventas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('welcome')}}">Integrantes</a>
         </li>
       </ul>
     </div>
