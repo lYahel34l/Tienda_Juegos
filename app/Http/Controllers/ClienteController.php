@@ -17,14 +17,7 @@ class ClienteController extends Controller
     }
 
     public function store(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'APpaterno'=>'required',
-            'APmaterno'=>'required',
-            'direccion'=>'required',
-            'Ciudad'=>'required',
-            'Telefono'=>'required'
-        ]);
+        
 
         $cliente = new Cliente();
         $cliente->nombre = $request->name;
@@ -33,10 +26,10 @@ class ClienteController extends Controller
         $cliente->direccion = $request->direccion;
         $cliente->ciudad = $request->ciudad;
         $cliente->telefono = $request->telefono;
-
+        
         $cliente->save();
 
-        return redirect()->route('cliente.show', $cliente);
+        return redirect()->route('cliente.show',$cliente->id);
     }
 
     public function show(Cliente $cliente){
@@ -49,16 +42,8 @@ class ClienteController extends Controller
 
     public function update(Request $request, Cliente $cliente){
 
-        $request->validate([
-            'name'=>'required',
-            'APpaterno'=>'required',
-            'APmaterno'=>'required',
-            'direccion'=>'required',
-            'Ciudad'=>'required',
-            'Telefono'=>'required'
-        ]);
 
-        $cliente = new Cliente();
+      
         $cliente->nombre = $request->name;
         $cliente->APpaterno = $request->APpaterno;
         $cliente->APmaterno = $request->APmaterno;

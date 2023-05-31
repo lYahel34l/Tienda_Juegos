@@ -65,6 +65,6 @@ Route::get('/proveedor/{proveedor}',[ProveedorController::class,'show'])->name('
 
 Route::get('/proveedor/{proveedor}/edit',[ProveedorController::class,'edit'])->name('proveedor.edit');
 
-Route::put('proveedor/{proveedor',[ProveedorController::class,'update'])->name('proveedor.update');
+Route::put('proveedor/{proveedor}',[ProveedorController::class,'update'])->name('proveedor.update');
 
 Route::delete('proveedor/{proveedor}',[ProveedorController::class,'destroy'])->name('proveedor.destroy');

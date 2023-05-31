@@ -17,20 +17,14 @@ class ProveedorController extends Controller
     }
 
     public function store(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'marca'=>'required',
-            'precio'=>'required',
-            'rutaImagen'=>'required'
-        ]);
+       
 
         $proveedor = new Proveedor();
         $proveedor->nombre = $request->name;
         $proveedor->contacto = $request->contacto;
         
         $proveedor->save();
-
-        return redirect()->route('proveedores.show', $proveedor);
+        return redirect()->route('proveedor.show', $proveedor->id);
     }
 
     public function show(Proveedor $proveedor){
@@ -43,14 +37,10 @@ class ProveedorController extends Controller
 
     public function update(Request $request, Proveedor $proveedor){
 
-        $request->validate([
-            'name'=>'required',
-            'contacto'=>'required'    
-        ]);
+        
 
         $proveedor->nombre = $request->name;
         $proveedor->contacto = $request->contacto;
-        
 
         $proveedor->save();
 
