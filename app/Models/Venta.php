@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class Venta extends Model
 {
     use HasFactory;
 
-    //relacion muchos a muchos
-    public function juguetes(){
-        return $this->belongsToMany(Juguete::class);
-    }
+    protected $table = 'cliente_juguete';
+    protected $fillable = [
+        'cliente_id',
+        'juguete_id',
+    ];
+
 }

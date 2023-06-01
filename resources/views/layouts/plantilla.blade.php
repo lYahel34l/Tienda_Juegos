@@ -34,7 +34,7 @@
           <a class="nav-link" href="#">Almacen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Ventas</a>
+          <a class="nav-link" href="{{route('venta.index')}}">Ventas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('welcome')}}">Integrantes</a>

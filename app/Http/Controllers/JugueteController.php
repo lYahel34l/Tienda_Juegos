@@ -25,7 +25,7 @@ class JugueteController extends Controller
         ]);
 
         $juguete = new Juguete();
-        $juguete->nombre = $request->name;
+        $juguete->producto = $request->name;
         $juguete->marca = $request->marca;
         $juguete->precio = $request->precio;
         $juguete->rutaImagen = $request->rutaImagen;
@@ -52,7 +52,7 @@ class JugueteController extends Controller
             'rutaImagen'=>'required'
         ]);
 
-        $juguete->nombre = $request->name;
+        $juguete->producto = $request->name;
         $juguete->marca = $request->marca;
         $juguete->precio = $request->precio;
         $juguete->rutaImagen = $request->rutaImagen;

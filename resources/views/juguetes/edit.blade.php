@@ -11,7 +11,7 @@
     
 <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" name="name" value="{{old('name',$juguete->nombre)}}">
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="name" value="{{old('name',$juguete->producto)}}">
     @error('name')
     <br>
     <small>*{{$message}}</small>

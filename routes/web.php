@@ -4,6 +4,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\JugueteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\VentaController;
 use App\Models\Juguete;
 use App\Models\Proveedor;
 use Illuminate\Routing\Route as RoutingRoute;
@@ -68,3 +69,10 @@ Route::get('/proveedor/{proveedor}/edit',[ProveedorController::class,'edit'])->n
 Route::put('proveedor/{proveedor}',[ProveedorController::class,'update'])->name('proveedor.update');
 
 Route::delete('proveedor/{proveedor}',[ProveedorController::class,'destroy'])->name('proveedor.destroy');
+
+
+/*-------------------------------------------------VENTAS-------------------------------------------------*/
+
+Route::get('/venta',[VentaController::class,'index'])->name('venta.index');
+Route::get('/ventas/create',[VentaController::class, 'create'])->name('ventas.create');
+Route::post('/ventas', [VentaController::class,'store'])->name('ventas.store');

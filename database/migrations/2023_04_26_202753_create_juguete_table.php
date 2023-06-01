@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('juguetes', function (Blueprint $table) {
             $table->id('id');
-            $table->string('nombre');
+            $table->string('producto');
             $table->string('rutaImagen')->nullable();
             $table->string('marca');
             $table->double('precio');

@@ -19,7 +19,7 @@
       </a>
       <div class="card-body">
         <a href="{{route('juguete.show',$juguete->id)}}">
-          <p class="card-text text-center">{{$juguete->nombre}}</p>
+          <p class="card-text text-center">{{$juguete->producto}}</p>
         </a>
           <br>
           <p class="card-text text-center"><strong>MXN {{$juguete->precio}}</strong> </p>

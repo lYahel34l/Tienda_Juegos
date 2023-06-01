@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-2">
-            <p><strong>{{$juguete->nombre}}</strong></p>
+            <p><strong>{{$juguete->producto}}</strong></p>
         </div>
         <div class="col-4">
             <img src='{{$juguete->rutaImagen}}'' class="card-img-top" alt="...">   
